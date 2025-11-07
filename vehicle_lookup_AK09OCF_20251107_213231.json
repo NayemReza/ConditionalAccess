@@ -1,0 +1,24 @@
+{
+  "format_decode": {
+    "registration": "AK09OCF",
+    "format_info": {
+      "format": "Current (2001-present)",
+      "age_identifier": "09",
+      "registration_year": 2009,
+      "registration_period": "March-August",
+      "local_memory_tag": "AK",
+      "random_letters": "OCF"
+    }
+  },
+  "mot_check": null,
+  "beta_api": {
+    "status": "skipped",
+    "message": "No API key provided. Register at: https://documentation.history.mot.api.gov.uk/"
+  },
+  "third_party": {
+    "UK Vehicle Data (unauthenticated test)": {
+      "status": "error",
+      "message": "HTTPSConnectionPool(host='uk1.ukvehicledata.co.uk', port=443): Max retries exceeded with url: /api/datapackage/VehicleData?v=2&api_nullitems=1&auth_apikey=&key_VRM=AK09OCF (Caused by SSLError(SSLError(1, '[SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] sslv3 alert handshake failure (_ssl.c:1016)')))"
+    }
+  }
+}
