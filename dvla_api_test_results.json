@@ -1,0 +1,30 @@
+{
+  "DVLA UAT (Test Environment)_no_key": {
+    "status_code": 403,
+    "headers": {
+      "content-length": "13",
+      "content-type": "text/plain",
+      "date": "Fri, 07 Nov 2025 21:44:26 GMT",
+      "connection": "close"
+    },
+    "body": "Access denied"
+  },
+  "DVLA UAT (Test Environment)_dummy_key": {
+    "status_code": 403,
+    "body": "Access denied"
+  },
+  "DVLA Production_no_key": {
+    "status_code": 403,
+    "headers": {
+      "content-length": "13",
+      "content-type": "text/plain",
+      "date": "Fri, 07 Nov 2025 21:44:27 GMT",
+      "connection": "close"
+    },
+    "body": "Access denied"
+  },
+  "DVLA Production_dummy_key": {
+    "status_code": 403,
+    "body": "Access denied"
+  }
+}

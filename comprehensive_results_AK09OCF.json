@@ -1,0 +1,37 @@
+{
+  "mot_scraping": {
+    "status": "failed",
+    "reason": "HTTP 403"
+  },
+  "direct_apis": {
+    "status": "attempted",
+    "results": {
+      "https://www.check-mot.service.gov.uk/results?registration=AK09OCF": {
+        "status": "error",
+        "message": "HTTPSConnectionPool(host='www.check-mot.service.gov.uk', port=443): Max retries exceeded with url: /results?registration=AK09OCF (Caused by SSLError(SSLError(1, '[SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] sslv3 alert handshake failure (_ssl.c:1016)')))"
+      },
+      "https://beta.check-mot.service.gov.uk/results?registration=AK09OCF": {
+        "status_code": 403,
+        "final_url": "https://beta.check-mot.service.gov.uk/results?registration=AK09OCF",
+        "content_type": "text/plain",
+        "content_preview": "Access denied"
+      },
+      "https://vehicleenquiry.service.gov.uk/?registration=AK09OCF": {
+        "status_code": 403,
+        "final_url": "https://vehicleenquiry.service.gov.uk/?registration=AK09OCF",
+        "content_type": "text/plain",
+        "content_preview": "Access denied"
+      },
+      "https://www.gov.uk/get-vehicle-information-from-dvla?registration=AK09OCF": {
+        "status_code": 403,
+        "final_url": "https://www.gov.uk/get-vehicle-information-from-dvla?registration=AK09OCF",
+        "content_type": "text/plain",
+        "content_preview": "Access denied"
+      }
+    }
+  },
+  "public_data": {
+    "status": "checked",
+    "results": {}
+  }
+}
