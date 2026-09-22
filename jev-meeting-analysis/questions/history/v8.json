@@ -1,0 +1,131 @@
+{
+ "purpose": {
+  "type": "choice",
+  "criteria": {
+   "recurring_status": "A regular team check-in where people report progress and blockers",
+   "project_working_session": "Hands-on work on one project: demos, reviewing designs, agreeing build details",
+   "proposal_signoff": "One person presents a proposal and asks others to approve it",
+   "vendor_or_partner": "A conversation with someone from an external company (supplier, partner, reseller)",
+   "company_broadcast": "A company-wide meeting where leaders share updates with everyone",
+   "planning_or_strategy": "Setting direction, priorities or objectives across several areas",
+   "other": "None of the above describes the meeting"
+  },
+  "instructions": "What kind of meeting is `transcript`?"
+ },
+ "interaction": {
+  "type": "score",
+  "criteria": [
+   "Monologue: one speaker gives almost every line and others barely speak",
+   "Presentation: one speaker leads; others mainly ask short questions or agree",
+   "Discussion: a few people contribute points and respond to each other, but one or two people drive it",
+   "Active collaboration or debate: many people jump in, challenge each other and build on each other's ideas"
+  ],
+  "instructions": "How interactive is the conversation in `transcript`? Use `speaker_stats` together with the transcript."
+ },
+ "decision_agreed": {
+  "type": "noul",
+  "criteria": {
+   "true": "Participants agreed what will happen next, including hedged agreements such as 'probably not this round, we'll look again next cycle' or 'let's book a call in October'",
+   "false": "The meeting ended with only information shared and no agreement on what will happen"
+  },
+  "instructions": "Did the participants agree on what will happen next?"
+ },
+ "plan_changed": {
+  "type": "noul",
+  "criteria": {
+   "true": "A plan agreed before this meeting was altered here: a date moved earlier or later, scope cut or pushed to after launch, or something postponed or cancelled",
+   "false": "Every plan and date that existed before the meeting still stands unchanged; only new plans were made"
+  },
+  "instructions": "Was a plan or date that existed before this meeting changed during it?"
+ },
+ "clear_owners": {
+  "type": "noul",
+  "criteria": {
+   "true": "Next steps were given to named people by the end of the meeting",
+   "false": "Next steps were left vague or without named owners"
+  },
+  "instructions": "Were next steps given to named people?"
+ },
+ "nayem_new_task": {
+  "type": "noul",
+  "criteria": {
+   "true": "Nayem Reza took on or was given a new task during this meeting",
+   "false": "Nayem Reza got no new task in this meeting; any Nayem work mentioned was already agreed before"
+  },
+  "instructions": "Did `focus_person` take on or get given a new task in this meeting?"
+ },
+ "nayem_big_deliverable": {
+  "type": "noul",
+  "criteria": {
+   "true": "A main subject of this meeting is a large deliverable, such as a product, site or system, that Nayem Reza builds, owns or launches",
+   "false": "The meeting's main subjects are other people's work or an outside company's offering; Nayem Reza's own projects come up only as side context"
+  },
+  "instructions": "Is a large deliverable owned by `focus_person` one of the main subjects of this meeting?"
+ },
+ "nayem_due_7_days": {
+  "type": "noul",
+  "criteria": {
+   "true": "A task owned by Nayem Reza has a deadline within 7 days, stated as a date, a day or a word such as 'today', 'tomorrow' or 'Monday'",
+   "false": "No task owned by Nayem Reza has a deadline within 7 days"
+  },
+  "instructions": "Does a task owned by `focus_person` have a deadline within 7 days of `meeting_date`?"
+ },
+ "others_waiting_on_nayem": {
+  "type": "noul",
+  "criteria": {
+   "true": "Someone is stuck: they cannot do a specific next step until Nayem Reza gives them access, credentials, content, a preview or a decision",
+   "false": "People may expect things from Nayem Reza, but nobody is stuck waiting; they can carry on with their own work meanwhile"
+  },
+  "instructions": "Is someone stuck waiting on `focus_person` before they can do their next step?"
+ },
+ "new_blocker": {
+  "type": "noul",
+  "criteria": {
+   "true": "A problem nobody knew about before this meeting is revealed here, and it could stop a deliverable or make it miss its deadline",
+   "false": "Every problem discussed was already known and underway before the meeting, such as a supplier already running late, or is minor or solved in the meeting"
+  },
+  "instructions": "Was a new blocker revealed for the first time in this meeting?"
+ },
+ "known_issue_escalated": {
+  "type": "noul",
+  "criteria": {
+   "true": "An existing known problem was reported as getting worse, overdue, or needing escalation",
+   "false": "No existing problem was reported as getting worse or needing escalation"
+  },
+  "instructions": "Was an already-known problem reported as getting worse, overdue or needing escalation?"
+ },
+ "deadline_risk": {
+  "type": "score",
+  "criteria": [
+   "No deadline is under pressure: deadlines are weeks or months away, or none are discussed",
+   "A deadline is days away and people are racing to meet it, but it is described as on track",
+   "A deadline is described as likely to slip",
+   "A deadline or planned date has already been missed or delayed"
+  ],
+  "instructions": "How much pressure are deadlines under, relative to `meeting_date`?"
+ },
+ "security_work": {
+  "type": "noul",
+  "criteria": {
+   "true": "Security or compliance work was discussed in substance: pen testing, audits, certifications (ISO 27001, SOC 2), access control or compliance tooling",
+   "false": "Security or compliance was not discussed, or only mentioned in passing, e.g. as a type of training or as a reason for something else"
+  },
+  "instructions": "Was security or compliance work discussed in substance?"
+ },
+ "company_spend": {
+  "type": "noul",
+  "criteria": {
+   "true": "Money Voxsmart spends or would spend was discussed: costs, quotes, prices, budgets, contracts or software renewals",
+   "false": "No Voxsmart spending was discussed; percentages of team time and revenue or sales pipeline figures do not count"
+  },
+  "instructions": "Was money that Voxsmart spends or would spend discussed?"
+ },
+ "vendor_next_step": {
+  "type": "noul",
+  "criteria": {
+   "true": "A next step with an external supplier or partner was agreed, such as a call booked, a quote or document requested, or a list to be shared",
+   "false": "No next step with an external supplier or partner was agreed"
+  },
+  "instructions": "Was a next step with an external supplier or partner agreed?"
+ }
+}
