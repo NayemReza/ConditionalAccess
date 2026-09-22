@@ -61,6 +61,12 @@ What each change was worth:
 | 16k-token windows for long meetings | 80% → 93% on a 25k-word meeting (8k and 12k windows scored lower) |
 | Attendee list, glossary, per-question `instructions`, `jev-preview` | No gain, or slightly worse |
 
+**Independent check.** Two meetings were never used for tuning: All Hands (10 Sep) and Blocker removal (1 Sep). Their answer keys were written from the full transcripts and 4 judgement calls were confirmed by the user.
+- **Score:** **27/30 = 90.0%**.
+- **Misses:**
+  - Two of the user's judgement calls: a SOC 2 thank-you, which Jev counted as security work, and a small "I'll ask Global Relay" follow-up, which Jev did not count as a decision.
+  - `clear_owners` on a meeting with many owners.
+
 Caveats:
 - Only 8 meetings were used, so one answer is worth about 1%.
 - The final wording was partly tuned on the test meetings.
